@@ -55,3 +55,6 @@ Artifacts.prototype.viewport;
 
 /** @type {number} */
 Artifacts.prototype.responseCode;
+
+/** @type {!Accessibility} */
+Artifacts.prototype.accessibility;
