@@ -23,6 +23,8 @@ const assert = require('assert');
 
 describe('Formatter', () => {
   it('returns supported formats', () => {
+    // Force the internal _formatters to not exist
+    Formatter._formatters = null;
     assert.notEqual(Formatter.SUPPORTED_FORMATS, undefined);
   });
 
