@@ -23,6 +23,7 @@ class MissingRequiredArtifacts extends LighthouseAudit {
   static get meta() {
     return {
       name: 'missing-category',
+      category: 'Custom',
       description: 'Missing required artifacts',
       requiredArtifacts: ['HTML']
     };
