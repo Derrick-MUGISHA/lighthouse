@@ -28,7 +28,7 @@ class AppCacheManifestAttr extends Audit {
     return {
       category: 'Offline',
       name: 'appcache-manifest',
-      description: 'Site isn\'t using Application Cache',
+      description: 'Site is not using Application Cache',
       requiredArtifacts: ['AppCacheManifest']
     };
   }
