@@ -55,18 +55,13 @@ class NoDateNowAudit extends Audit {
     }
 
     const pageHost = url.parse(artifacts.URL.finalUrl).host;
-    // Filter out Date.now() usage if script was on another host or an error with
-    // the same url:line:col combo has already been seen.
-    const results = artifacts.DateNowUse.dateNowUses.reduce((prev, err) => {
-      const jsonStr = JSON.stringify(err);
-      if (url.parse(err.url).host === pageHost && prev.indexOf(jsonStr) === -1) {
-        prev.push(jsonStr);
-      }
-      return prev;
-    }, []).map(err => {
-      err = JSON.parse(err);
-      err.misc = `(line: ${err.line}, col: ${err.col})`;
-      return err;
+    // Filter usage from other hosts.
+    const results = artifacts.DateNowUse.usage.filter(err => {
+      return url.parse(err.url).host === pageHost;
+    }).map(err => {
+      return Object.assign({
+        misc: `(line: ${err.line}, col: ${err.col})`
+      }, err);
     });
 
     return NoDateNowAudit.generateAuditResult({
