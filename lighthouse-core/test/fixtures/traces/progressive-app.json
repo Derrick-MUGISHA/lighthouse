@@ -31824,18 +31824,6 @@
   {
     "pid": 15579,
     "tid": 1295,
-    "ts": 668545843568,
-    "ph": "R",
-    "cat": "blink.user_timing",
-    "name": "firstLayout",
-    "args": {
-      "frame": "0xb34bdc41e10"
-    },
-    "tts": 309360
-  },
-  {
-    "pid": 15579,
-    "tid": 1295,
     "ts": 668545843626,
     "ph": "X",
     "cat": "devtools.timeline",
@@ -140159,6 +140147,19 @@
     "name": "firstContentfulPaint",
     "args": {
       "frame": "0xb34bdd04540"
+    },
+    "tts": 565898,
+    "s": "p"
+  },
+  {
+    "pid": 15579,
+    "tid": 1295,
+    "ts": 668546482250,
+    "ph": "I",
+    "cat": "blink.user_timing",
+    "name": "firstMeaningfulPaint",
+    "args": {
+      "frame": "0xb34bdc41e10"
     },
     "tts": 565898,
     "s": "p"
