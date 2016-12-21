@@ -23,5 +23,6 @@
 
 /* global self */
 
-module.exports = (typeof self !== 'undefined' && self.URL) ||
-  require('url').URL || require('whatwg-url').URL;
+// TODO: Add back node require('url').URL parsing when bug is resolved:
+// https://github.com/GoogleChrome/lighthouse/issues/1186
+module.exports = (typeof self !== 'undefined' && self.URL) || require('whatwg-url').URL;
