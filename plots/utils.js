@@ -55,5 +55,5 @@ function shuffle(array) {
 module.exports = {
   isDir,
   isFile,
-  shuffle
+  shuffle,
 };
