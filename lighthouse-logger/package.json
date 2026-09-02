@@ -7,7 +7,7 @@
   "repository": "https://github.com/GoogleChrome/lighthouse.git",
   "scripts": {
     "prepack": "yarn build-types",
-    "build-types": "npx tsc index.js --allowJs --emitDeclarationOnly --declaration"
+    "build-types": "node init && npx tsc index.js --allowJs --emitDeclarationOnly --declaration"
   },
   "dependencies": {
     "debug": "^4.4.1",
