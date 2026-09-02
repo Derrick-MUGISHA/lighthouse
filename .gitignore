@@ -1,7 +1,6 @@
 node_modules
 .DS_Store
 npm-debug.log
-.vscode
 .tmp
 .idea
 .tmp_env
@@ -71,3 +70,4 @@ build/test/page-functions-test-case*out*.js
 build/test/page-functions-test-case*out*.js.map
 
 .aider*
+config.bat

@@ -90,7 +90,7 @@
     "diff:flow-sample-json": "yarn i18n:collect-strings && bash core/scripts/assert-baseline-flow-result-unchanged.sh",
     "computeBenchmarkIndex": "./core/scripts/benchmark.js",
     "save-latest-run": "./core/scripts/save-latest-run.sh",
-    "compile-proto": "protoc --python_out=./ ./proto/lighthouse-result.proto && mv ./proto/*_pb2.py ./proto/scripts || (echo \"❌ Install protobuf = 3.20.x to compile the proto file.\" && false)",
+    "compile-proto": "protoc --python_out=./ ./proto/lighthouse-result.proto && mv ./proto/*_pb2.py ./proto/scripts || (echo \"\u274c Install protobuf = 3.20.x to compile the proto file.\" && false)",
     "build-proto-roundtrip": "mkdir -p .tmp && python3 proto/scripts/json_roundtrip_via_proto.py",
     "static-server": "node cli/test/fixtures/static-server.js",
     "serve-dist": "cd dist && python3 -m http.server 7878",

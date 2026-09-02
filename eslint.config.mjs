@@ -8,6 +8,9 @@ import globals from 'globals';
 import tsParser from '@typescript-eslint/parser';
 import js from '@eslint/js';
 import {FlatCompat} from '@eslint/eslintrc';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
